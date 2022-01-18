@@ -1,0 +1,5 @@
+<mux class="org.jpos.q2.iso.QMUX" logger="Q2" name="qmux">
+    <in>receive</in>
+    <out>send</out>
+    <ready>channel.ready</ready>
+</mux>

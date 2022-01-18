@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+
+
+<!--xml packager-->
+<channel-adaptor name='channel' class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2">
+    <channel class="com.agussuhardi.iso8583.iso.MyChannel" logger="Q2"
+             packager="com.agussuhardi.iso8583.iso.MyPackager">
+        <property name="host" value="127.0.0.1"/>
+        <property name="port" value="3000"/>
+    </channel>
+    <in>send</in>
+    <out>receive</out>
+    <reconnect-delay>10000</reconnect-delay>
+</channel-adaptor>
+
+
+        <!--java packager-->
+        <!--
+        <channel-adaptor name='channel' class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2">
+        <channel class="com.agussuhardi.iso8583.iso.MyChannel"
+                 logger="Q2"
+                 packager="org.jpos.iso.packager.GenericPackager">
+            <property name="host" value="127.0.0.1" />
+            <property name="port" value="3000" />
+            <property name="packager-config" value="cfg/packager.xml" />
+        </channel>
+        <in>send</in>
+        <out>receive</out>
+        <reconnect-delay>10000</reconnect-delay>
+        </channel-adaptor>
+        -->
